@@ -19,8 +19,8 @@ class MessageBubble extends StatelessWidget {
             isSent ? MainAxisAlignment.end : MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          if (isSent) ...[
-            Avatarwidget(imageUrl: message.avatarUrl ?? '', size: 30),
+          if (!isSent) ...[
+            AvatarWidget(imageUrl: message.avatarUrl ?? '', size: 30),
             SizedBox(width: 8),
           ],
 
@@ -64,6 +64,11 @@ class MessageBubble extends StatelessWidget {
               ),
             ),
           ),
+          if (isSent) ...[
+            SizedBox(width: 8),
+            AvatarWidget(imageUrl: message.avatarUrl ?? '', size: 30),
+            
+          ],
         ],
       ),
     );

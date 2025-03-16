@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 
-class Avatarwidget extends StatelessWidget {
+class AvatarWidget extends StatelessWidget {
   final String imageUrl;
   final double size;
 
-  const Avatarwidget({
+  const AvatarWidget({
     super.key,
     this.size = 40,
     required this.imageUrl,
