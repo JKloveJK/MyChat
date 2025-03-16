@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
@@ -8,10 +7,10 @@ class Avatarwidget extends StatelessWidget {
   final double size;
 
   const Avatarwidget({
-    Key? key,
+    super.key,
     this.size = 40,
     required this.imageUrl,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
